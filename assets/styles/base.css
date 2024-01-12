@@ -1,0 +1,78 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+:root {
+    --primary-color: #0F1B4C;
+    --second-color: #000339;
+    --background-color: #E6F0FF;
+    --heading-color: #000336;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.button-s,
+.button-m {
+    --width: 98px;
+    --height: 40px;
+    min-width: var(--width);
+    line-height: var(--width);
+    height: var(--height);
+    width: fit-content;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.button-s::before,
+.button-m::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: .1;
+    z-index: -1;
+    transition: all .4s cubic-bezier(.165, .84, .44, 1);
+}
+
+.button-s:hover::before,
+.button-m:hover::before {
+    left: auto;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.button-m {
+    --width: 170px;
+    --height: 50px;
+    font-size: 1.3rem;
+    border-radius: 12px;
+}
+
+.section-heading {
+    color: var(--second-color);
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
